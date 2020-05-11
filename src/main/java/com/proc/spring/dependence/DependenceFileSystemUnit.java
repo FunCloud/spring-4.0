@@ -1,5 +1,6 @@
 package com.proc.spring.dependence;
 
+import com.proc.spring.dependence.bean.CircleDepA;
 import com.proc.spring.ioc.bean.QRFirstBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
@@ -10,8 +11,8 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
 public class DependenceFileSystemUnit {
 
     public static void main(String[] args) {
-        ApplicationContext application = new FileSystemXmlApplicationContext("classpath:filesystem/spring-context.xml");
-        QRFirstBean firstBean = (QRFirstBean) application.getBean("firstBean");
-        firstBean.call();
+        ApplicationContext application = new FileSystemXmlApplicationContext("classpath:dependence/spring-context.xml");
+        CircleDepA circleDepA = (CircleDepA) application.getBean("circleDepA");
+        circleDepA.doDepBMethod();
     }
 }
