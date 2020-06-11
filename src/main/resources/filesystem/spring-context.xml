@@ -17,4 +17,10 @@
 
 	<bean id="firstBean" class="com.proc.spring.ioc.bean.QRFirstBean"></bean>
 
+	<bean class="com.proc.spring.ioc.bean.TypeInitBean">
+		<property name="injectBean" ref="injectBean">
+		</property>
+	</bean>
+
+	<bean name="injectBean" class="com.proc.spring.ioc.bean.InjectBean" />
 </beans>
