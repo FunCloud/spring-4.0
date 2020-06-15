@@ -15,19 +15,4 @@
 
 	<!--<context:component-scan base-package="com.proc.spring.aop"/>-->
 	<context:annotation-config></context:annotation-config>
-
-	<bean id="memberService" class="com.proc.spring.aop.bean.MemberService">
-	</bean>
-
-	<bean id="aspectService" class="com.proc.spring.aop.aspect.AspectService" />
-
-	<aop:config>
-		<aop:aspect ref="aspectService">
-			<aop:pointcut id="memberPointCut" expression="execution(* com.proc.spring.aop.bean..*.*(..))" />
-			<aop:before method="before" pointcut-ref="memberPointCut"/>
-			<aop:after method="after" pointcut-ref="memberPointCut"/>
-			<aop:after-returning method="afterReturn" pointcut-ref="memberPointCut"/>
-			<aop:after-throwing method="afterThrowing" pointcut-ref="memberPointCut"/>
-		</aop:aspect>
-	</aop:config>
 </beans>
