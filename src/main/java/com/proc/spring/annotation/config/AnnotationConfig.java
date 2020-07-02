@@ -15,8 +15,8 @@ import org.springframework.context.annotation.ComponentScan;
  * @Date: 2020/6/11 10:50
  * @Description:
  */
-@Configurable
-@ComponentScan("com.proc.spring.annotation.bean")
+/*@Configurable*/
+/*@ComponentScan("com.proc.spring.annotation.bean")*/
 public class AnnotationConfig {
 
     @Autowired
