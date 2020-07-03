@@ -22,6 +22,7 @@ public class AnnotationConfig {
     @Autowired
     private AutowireBean autowireBean;
 
+    //就算不打@Configurable注解，扫描到@Bean注解之后还是会将当前类当成一个配置类处理
     @Bean
     public ConfigServiceBean getConfigService(){
         ConfigServiceBean configServiceBean = new ConfigServiceBean();
