@@ -1,4 +1,4 @@
-package com.proc.spring.aop.aspect;
+package com.proc.spring.aop.xml.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.springframework.stereotype.Component;

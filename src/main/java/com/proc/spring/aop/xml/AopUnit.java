@@ -1,7 +1,6 @@
-package com.proc.spring.aop;
+package com.proc.spring.aop.xml;
 
-import com.proc.spring.aop.aspect.AspectService;
-import com.proc.spring.aop.bean.MemberService;
+import com.proc.spring.aop.xml.bean.MemberService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

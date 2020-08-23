@@ -1,4 +1,4 @@
-package com.proc.spring.aop.bean;
+package com.proc.spring.aop.xml.bean;
 
 /**
  * Created by fangjianhui on 2020/6/15.
