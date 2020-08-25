@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  */
 @Aspect
 @Component
-public class AnnotationMemberService {
+public class DAnnotationMemberService {
 
     @Pointcut("execution(* com.proc.spring.aop.annotation.bean..*(..))")
     public void pointcutConfig(){
