@@ -20,7 +20,7 @@ public class DAnnotationMemberService {
     }
 
     @Before("pointcutConfig()")
-    public void before(){
+    public void beforeConfigService(){
         System.out.println("======before=======");
     }
 }
