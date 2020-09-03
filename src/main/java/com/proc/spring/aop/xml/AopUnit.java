@@ -1,6 +1,7 @@
 package com.proc.spring.aop.xml;
 
 import com.proc.spring.aop.xml.bean.MemberService;
+import com.proc.spring.aop.xml.bean.MemberServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -11,7 +12,7 @@ public class AopUnit {
 
     public static void main(String[] args) throws Exception {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:aop/spring-aop.xml");
-        MemberService memberService = (MemberService) applicationContext.getBean("memberService");
+        MemberService memberService = applicationContext.getBean(MemberService.class);
         memberService.deleteMember();
     }
 }

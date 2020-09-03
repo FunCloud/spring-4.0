@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 /**
  * Created by fangjianhui on 2020/6/15.
  */
-@Component
 public class AspectService {
 
     public void before(JoinPoint pointcut){
