@@ -12,6 +12,6 @@ public class AopUnit {
     public static void main(String[] args) throws Exception {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:aop/spring-aop.xml");
         MemberService memberService = applicationContext.getBean(MemberService.class);
-        memberService.updateMember();
+        memberService.deleteMember();
     }
 }

@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
  * @Description:
  */
 @ComponentScan("com.proc.spring.annotation.bean")
-/*@Configuration*/
+@Configuration
 public class AnnotationConfig {
 
     @Autowired
