@@ -9,12 +9,12 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Component
 @Transactional(readOnly = false)
-public class TransactionBeanA {
+public class TransactionBeanA implements ITransactionA {
 
     @Autowired
-    private TransactionBeanB transactionBeanB;
+    private ITransactionB transactionBeanB;
 
-    public void doDepBMethod(){
-        transactionBeanB.doDepBMethod();
+    public void doDepMethod(){
+        transactionBeanB.doDepMethod();
     }
 }
