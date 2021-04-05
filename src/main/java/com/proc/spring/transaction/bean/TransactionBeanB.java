@@ -15,7 +15,8 @@ public class TransactionBeanB implements ITransactionB {
     private ITransactionA transactionBeanA;
 
     public void doDepMethod(){
-        System.out.println("finish!!!");
+        System.out.println("进入B类方法...");
+        int a = 1/0;
         //transactionBeanA.doDepBMethod();
     }
 }
