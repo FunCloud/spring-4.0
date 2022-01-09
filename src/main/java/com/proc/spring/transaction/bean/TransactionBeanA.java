@@ -8,7 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
  * Created by fangjianhui on 2020/6/17.
  */
 @Component
-@Transactional(readOnly = false)
 public class TransactionBeanA implements ITransactionA {
 
     @Autowired
