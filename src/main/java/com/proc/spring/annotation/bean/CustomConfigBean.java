@@ -3,6 +3,7 @@
  */
 package com.proc.spring.annotation.bean;
 
+import com.proc.spring.annotation.custom.MyAnnotation;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,5 +12,6 @@ import org.springframework.stereotype.Component;
  * @Description:
  */
 @Component
+@MyAnnotation
 public class CustomConfigBean implements IConfig {
 }
