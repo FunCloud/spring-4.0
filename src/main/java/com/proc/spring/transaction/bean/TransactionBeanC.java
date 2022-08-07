@@ -18,6 +18,6 @@ public class TransactionBeanC implements ITransactionC {
     @Transactional
     @Override
     public void doMethodC() {
-
+        System.out.println("进入method c");
     }
 }

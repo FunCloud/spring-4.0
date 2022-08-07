@@ -13,7 +13,7 @@ public class TransactionBeanA implements ITransactionA {
     @Autowired
     private ITransactionB transactionBeanB;
     @Autowired
-    private TransactionBeanC transactionBeanC;
+    private ITransactionC transactionBeanC;
 
     public void doDepMethod(){
         System.out.println("进入C类方法...");
