@@ -15,7 +15,7 @@ public class TransactionBeanA implements ITransactionA {
     @Autowired
     private ITransactionC transactionBeanC;
 
-    @Transactional//TODO 不生效
+    @Transactional
     public void doDepMethod(){
         System.out.println("进入C类方法...");
         transactionBeanC.doMethodC();
@@ -24,6 +24,7 @@ public class TransactionBeanA implements ITransactionA {
             transactionBeanB.doDepMethod();
         } catch (Exception e) {
             e.printStackTrace();
+            //注释 throw e 则transactionBeanB.doDepMethod()报异常，事务不回滚
             throw e;
         }
     }
