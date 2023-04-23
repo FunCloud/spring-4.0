@@ -1,37 +1,37 @@
-package com.proc.spring.transaction.bean;
+package com.proc.spring.transaction.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
 /**
  * @Auther: 方建辉
- * @Date: 2021/3/24 23:53
+ * @Date: 2022/8/21 18:45
  * @Description:
  */
-@Configuration
-@EnableTransactionManagement
-@PropertySource("classpath:transaction/druid.properties")
-public class TransactionConfig {
+/*@Configuration
+@ComponentScan("com.proc.spring.transaction.bean")
+@EnableAspectJAutoProxy*/
+public class AnnotationTransactionConfig {
 
-    @Value("${druid.driverClassName}")
+    @Value("${druid.driverClassName:com.mysql.jdbc.Driver}")
     private String driverClassName;
 
-    @Value("${druid.url}")
+    @Value("${druid.url:jdbc:mysql://localhost:3306/jh?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull}")
     private String url;
 
-    @Value("${druid.username}")
+    @Value("${druid.username:root}")
     private String username;
 
-    @Value("${druid.password}")
+    @Value("${druid.password:root}")
     private String password;
 
     @Bean

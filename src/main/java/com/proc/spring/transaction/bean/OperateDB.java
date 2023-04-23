@@ -20,7 +20,7 @@ public class OperateDB {
 
     public void insertDict1(){
         String id = new Date().getTime() + "00" + new Random().nextInt();
-        String sql = "insert into SYSTEM_DICT values('"+id+"','1','1','1','1','1','1','1','2019-04-11 23:41:04','1','2019-04-11 23:41:04','1');";
+        String sql = "insert into SYSTEM_DICT values('"+id+"','1','1','1','1','1','1','1','2023-04-11 23:41:04','1','2019-04-11 23:41:04','1');";
         jdbcTemplate.execute(sql);
     }
 
